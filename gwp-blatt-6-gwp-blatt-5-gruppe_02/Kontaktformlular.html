@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Kontaktformular</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- bootstrap.css und Formular.js einbinden -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="Formular.js"></script>
+    </head>
+
+    <body>
+        <div class="container mt-5">
+
+            <h1>Kontaktformular</h1>
+            
+            <form class="row g-3" method="post" id="kontaktFormular" onsubmit="return validateCaptcha();">
+                <fieldset>
+                    <legend>Persönliche Daten</legend>
+                    
+                    <div class="col-md-3">
+                        <label for="vorname" class="form-label">Vorname</label>
+                        <input type="text" class="form-control" id="vorname" required>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <label for="nachname" class="form-label">Nachname</label>
+                        <input type="text" class="form-control" id="nachname" required>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label for="geburtsdatum" class="form-label">Geburtsdatum</label>
+                        <input type="date" class="form-control" id="geburtsdatum" onblur="checkAge()" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Geschlecht</label>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="geschlecht" id="männlich" value="männlich">
+                                <label class="form-check-label" for="männlich">männlich</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="geschlecht" id="weiblich" value="weiblich">
+                                <label class="form-check-label" for="weiblich">weiblich</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="geschlecht" id="diverse" value="diverse">
+                                <label class="form-check-label" for="diverse">diverse</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <label for="email" class="form-label">E-Mail-Adresse</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Studieninteressen und Kenntnisse</legend>
+                    
+                    <div class="col-md-3">
+                        <label for="studienfach" class="form-label">Studienfach</label>
+                        <select class="form-select" id="studienfach" name="studienfach" multiple size ="5">
+                            <option value="BWL">BWL</option>
+                            <option value="Mathematik">Mathematik</option>
+                            <option value="Informatik">Informatik</option>
+                            <option value="Wirtschaftsinformatik">Wirtschaftsinformatik</option>
+                            <option value="Medien">Irgendwas mit Medien</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Kenntnisse</label>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="kenntnisse" id="java" value="Java">
+                                <label class="form-check-label" for="java">Java</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="kenntnisse" id="js" value="JavaScript">
+                                <label class="form-check-label" for="js">JavaScript</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="kenntnisse" id="html" value="HTML">
+                                <label class="form-check-label" for="html">HTML</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Sonstiges</legend>
+                    <div class="col-md-6">
+                        <textarea class="form-control" id="sonstiges" rows="4"></textarea>
+                    </div>
+                    <br>
+                    <div id="captcha">
+                        
+                    </div>
+                    <input type="text" id="captchaInput" placeholder="Ihre Antwort">
+                    <input type="submit" value="Absenden">
+                    <input type="reset" value="Zurücksetzen">
+                </form>
+                </fieldset>
+            </div>
+    </body>
+</html>

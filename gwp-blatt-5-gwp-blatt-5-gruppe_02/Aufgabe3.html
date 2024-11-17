@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aufgabe 3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .blau {
+        color: blue;
+        background-color: yellow;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var links = document.querySelectorAll("a");
+
+        for (var i = 0; i < links.length; i++) {
+            links[i].classList.add("blau");
+        }
+    });
+    </script>
+  </head>
+  <body>
+    <h1>Lauter Links</h1>
+    <p>Wenn man erstmal anfängt Links zu sammeln, geht es immer weiter:</p>
+    <p><a href="https://www.google.de/">Google</a></p>
+    <p><a href="https://www.w3schools.com/">W3 Schools</a></p>
+    <p><a href="https://w-hs.de/">Die FH</a></p>
+    <p><a href="https://www.akafoe.de/gastronomie/speiseplaene-der-mensen/wh-bocholt">Der Mensa-Plan</a></p>
+    <p>Jetzt ist es aber erstmal gut!</p>
+</body>
+</html>

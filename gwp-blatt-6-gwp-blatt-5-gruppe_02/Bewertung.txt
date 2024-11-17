@@ -1,0 +1,8 @@
+A1: 
+a: ok
+b: Es sollten drei Spalten bleiben (-5%)
+c: Die erste Spalte sollte doppelt so breit wie die anderen sein. Vielleicht haben Sie die Aufgabe anders verstanden (daher kein Abzug)
+
+A2: OK
+
+gesamt: 95%

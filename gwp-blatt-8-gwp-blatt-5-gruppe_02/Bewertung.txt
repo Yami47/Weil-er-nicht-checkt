@@ -1,0 +1,7 @@
+A1: ok
+
+Aufgabe 2: Ihre Auswertung der jahre enthält einen Fehler: Sie vergleichen das Datum von Führerschein bzw. 
+Einschulung mit dem aktuellen Datum. Daher schlägt Ihr Test bei Fehlern nicht an. Da ansonsten alles korrekt
+aussieht, ziehe ich hierfür nur 17% ab.
+
+Gesamt: 83%

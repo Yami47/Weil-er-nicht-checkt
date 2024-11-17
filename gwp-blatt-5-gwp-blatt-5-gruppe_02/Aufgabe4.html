@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Blatt 6, Aufgabe 4</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .hide{
+      display: none
+    }
+  </style>
+  <script>
+    function showAndHide() {
+      
+      var verborgenerText = document.getElementById('verborgenerText');
+      var verbergen = document.getElementById('verbergen');
+      var weiterlesen = document.getElementById('weiterlesen');
+
+      if (verborgenerText.classList.contains('hide')) {
+        verborgenerText.classList.remove('hide');
+        verbergen.classList.remove('hide');
+        weiterlesen.classList.add('hide');
+      } else {
+        verborgenerText.classList.add('hide');
+        verbergen.classList.add('hide');
+        weiterlesen.classList.remove('hide');
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Webstandards</h1>
+  <p>Ich bin nur ein kleiner Fülltext.</p>
+  <p id='weiterlesen'><a onclick='showAndHide()' href='#'>weiterlesen...</a>
+  <p id='verborgenerText' class="hide">Aber wenn Sie nun schon die Güte haben, mich ein paar weitere Sätze lang zu
+    begleiten, möchte ich die Gelegenheit nutzen, Ihnen nicht nur als Lückenfüller zu dienen, sondern auf etwas
+    hinzuweisen, das es ebenso verdient wahrgenommen zu werden: Webstandards nämlich.</p>
+  <p id='verbergen' class='hide'><a onclick='showAndHide()' href='#'>verbergen...</a>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+A1: ok
+A2: ok
+A3: ok
+A4: ok
+
+Sehr gut: 100%
